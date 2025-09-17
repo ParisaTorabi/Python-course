@@ -153,3 +153,39 @@ while n != 1:
     else:
         n = (n * 3) + 1
 print(n)
+# %%% pass, break, continue
+
+for a in [1, 2, 4]:
+    pass  # does nothing
+
+print("printing a list")
+
+for a in [1, 2, 45, 3, 6, 7, 8, 9]:
+    if a == 3:
+        break
+    print(a)
+
+print("now we've reached 3!")
+
+print("printing a list, except for 3")
+
+for a in [1, 2, 45, 3, 6, 7, 8, 9]:
+    if a == 3:
+        continue
+    print(a)
+
+print("end of the loop")
+# %%% hop hoop game
+
+for n in range(1, 21):
+    if n % 5 == 0 and n % 3 == 0:
+        print("hihoop!")
+        continue
+    if n % 3 == 0:
+        print("hop")
+        continue
+    if n % 5 == 0:
+        print("hoop")
+        continue
+
+    print(n)
