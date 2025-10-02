@@ -38,3 +38,32 @@ def calculate_area(**kwargs):
 calculate_area(length=4, width=5)
 calculate_area(base=3, height=2)
 calculate_area(radius=5)
+
+# %%
+"""
+In this exercise, you need to write a function called pick_evens(*args) that takes a series of numbers and returns only even numbers.
+
+Your task:
+Write a function called pick_evens(*args) that: Takes an unlimited number of numbers as input.
+Returns only even numbers as a list.
+If there are no even numbers, return an empty list [].
+
+Inputs:
+Multiple integers that are passed to the pick_evens function.
+
+Outputs:
+A list containing only even numbers.
+If there are no even numbers in the input, return an empty list [].
+"""
+
+
+def pick_evens(*args):
+    result = []
+    for num in args:
+        if num % 2 == 0:
+            result.append(num)
+    return result
+
+
+print(pick_evens(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+print(pick_evens(7, 13, 19, 21))
