@@ -1,0 +1,40 @@
+# %% About args
+def multiply(*args):
+    if len(args):
+        result = 1
+        for item in args:
+            result *= item
+        return result
+    else:
+        print("No entries were given.")
+
+
+print(multiply())
+
+# %% About kwargs
+
+
+import math
+
+
+def calculate_area(**kwargs):
+    """
+    calculates the area of either a rectangle or a circle or a triangle
+    """
+    if "length" in kwargs and "width" in kwargs:
+        print(f"Area of your rectangle is {kwargs['length']* kwargs['width']}.")
+        return
+    if "height" in kwargs and "base" in kwargs:
+        print(f"Area of your triangle is {(kwargs['base']*kwargs['height'])/2}.")
+        return
+
+    if "radius" in kwargs:
+        print(f"Area of your circle is {math.pi* (kwargs['radius']**2)}.")
+        return
+    print("No valid shape given.")
+    return None
+
+
+calculate_area(length=4, width=5)
+calculate_area(base=3, height=2)
+calculate_area(radius=5)
