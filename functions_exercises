@@ -36,3 +36,38 @@ if __name__ == "__main__":
     a = int(input("Give me the first number "))
     b = int(input("Give me the second number "))
     print(f"a**2+b**2 = {sum_of_squares(a,b)}")
+
+# %%
+
+"""
+In this exercise, you need to define a function called is_greater(a, b) that checks whether a is greater than b.
+
+Your task:
+Define a function called is_greater(a, b) that:
+
+Takes two integers a and b as input.
+
+Checks whether a is greater than b.
+
+Returns True if a > b.
+
+Returns False if a ≤ b.
+
+The value should be returned, not printed directly.
+
+Inputs:
+The two integers a and b that are read from the input.
+Outputs:
+A True value if a is greater than b.
+A False value if a is less than or equal to b.
+"""
+
+
+def is_greater(a: int, b: int):
+    return a > b
+
+
+if __name__ == "__main__":
+    a = int(input("Enter the first integer "))
+    b = int(input("Enter the second integer "))
+    print(f"{a} {'is' if is_greater(a,b) else 'is not'} greater than {b}.")
