@@ -1,0 +1,19 @@
+"""
+Write a function called is_positive that takes a number and returns True if it is positive or zero, and False otherwise.
+
+Inputs:
+An integer (int).
+
+Outputs:
+A True value if it is positive or zero.
+A False value if it is negative.
+"""
+
+
+def is_positive(num: int):
+    return num >= 0
+
+
+if __name__ == "__main__":
+    input_number = int(input("Enter number "))
+    print(is_positive(input_number))
