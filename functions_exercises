@@ -17,3 +17,22 @@ def is_positive(num: int):
 if __name__ == "__main__":
     input_number = int(input("Enter number "))
     print(is_positive(input_number))
+
+# %%
+"""
+In this exercise, you need to write a function that takes two integers and calculates the sum of their squares.
+
+Your task:
+Write a function called sum_of_squares that takes two integers and returns the sum of the squares of those two numbers.
+
+"""
+
+
+def sum_of_squares(a: int, b: int):
+    return a**2 + b**2
+
+
+if __name__ == "__main__":
+    a = int(input("Give me the first number "))
+    b = int(input("Give me the second number "))
+    print(f"a**2+b**2 = {sum_of_squares(a,b)}")
