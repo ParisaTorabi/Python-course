@@ -94,4 +94,32 @@ Erfan = Runner("Erfan")
 for person in [Parisa, Erfan]:
     person.act()  # Interesting!!
 
-# %% abstract methods
+# %% abstract classes/methods
+
+
+class Human:
+    def __init__(self, name: str):
+        self.name = name
+
+    def jump(self):
+        raise NotImplementedError("Implement jump!")
+
+
+class Programmer(Human):
+    pass
+
+
+Parisa = Programmer("Parisa")
+
+Parisa.jump()  ## says you have to implement this function!
+
+
+# %%
+class Programmer(Human):
+    def jump(self):
+        print(f"{self.name} is jumping!")
+
+
+Parisa = Programmer("Parisa")
+
+Parisa.jump()  # You basically force all the inheritents of the class to define this function, otherwise face an error!
