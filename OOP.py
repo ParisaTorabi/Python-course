@@ -123,3 +123,31 @@ class Programmer(Human):
 Parisa = Programmer("Parisa")
 
 Parisa.jump()  # You basically force all the inheritents of the class to define this function, otherwise face an error!
+
+# %% Dunders...
+
+
+# let's go back to books!
+class Book:
+
+    def __init__(self, name, pages):
+        self.pages = pages
+        self.name = name
+
+    def open_a_random_page(self):
+        print(f"Opened page {random.randint(1, self.pages)} of the book {self.name}.")
+
+    def __len__(self):
+        return self.pages
+
+    def __str__(self):
+        return f"{self.name}, with {self.pages} pages."
+
+    def __del__(self):
+        print(f"Oh, {self.name} book is disappearing!...")
+
+
+my_book = Book("C Programming", 241)
+print(f"Printing mybook resulst in: {my_book}")
+print(f"Length of mybook is {len(my_book)}")
+del my_book
